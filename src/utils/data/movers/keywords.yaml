@@ -1,0 +1,76 @@
+regex_movers:
+    - ((?:(?:^|\s)moving)(?:.){0,4})
+    - ((?:(?:^|\s)move(?:s)?^[d])(?:.){0,4})
+    - ((?:^|\s)realestat)
+    - ((?:(?:^|\s)house)(?:.){0,2}(?:hunt))
+    - (?:(?:^|\s)reltor\s)
+
+regex_things:
+    - ((?:(?:^|\s)moving)(?:.){0,2}(?:\sit|\sthe))
+    - ((?:(?:^|\s)move(?:s)?)(?:.){0,2}(?:\sit|\sthe))
+    - ((?:(?:^|\s)it(?:\'s|\sis)?)(?:.){0,3}(?:\smove(?:s)?))
+    - ((?:(?:^|\s)it(?:\'s|\sis)?)(?:not)?(?:.){0,3}(?:\smoving(?:\s|\.|\,|s|\'|\?|\!|$)))
+    - ((?:(?:^|\s)this\sis)(?:not)?(?:.){0,3}(?:\smoving(?:\s|\.|\,|s|\'|\?|\!|$)))
+
+regex_negation:
+    - ((?:(?:^|\s)not\s|n\'t)(?:going)?(?:\sto)?(?:.){0,1}(?:\smov(?:ing|e|ed|es)(?:\s|\.|\,|s|\'|\?|\!|$)))
+    
+regex_cancel:
+    - ((?:internet|\stv\s|servic|contract|offer|television|plan)(?:.){0,8}(?:(?:\s)end))
+    - ((?:internet|\stv\s|servic|contract|offer|television|plan)(?:.){0,8}(?:(?:\s)stop))
+    - ((?:internet|\stv\s|servic|contract|offer|television|plan)(?:.){0,8}(?:(?:\s)terminat))
+    - ((?:internet|\stv\s|servic|contract|offer|television|plan)(?:.){0,8}(?:(?:\s)cancel))
+    - ((?:internet|\stv\s|servic|contract|offer|television|plan)(?:.){0,8}(?:\sshut\soff))
+    - ((?:(?:^|\s)end)(?:.){0,8}(?:internet|\stv\s|servic|contract|offer|plan|television))
+    - ((?:(?:^|\s)finish)(?:.){0,8}(?:internet|\stv\s|servic|contract|offer|plan|television))
+    - ((?:(?:^|\s)stop)(?:.){0,8}(?:internet|\stv\s|servic|contract|offer|plan|television))
+    - ((?:(?:^|\s)terminat)(?:.){0,8}(?:internet|\stv\s|servic|contract|offer|plan|television))
+    - ((?:(?:^|\s)shut\soff)(?:.){0,8}(?:internet|\stv\s|servic|contract|offer|plan|television))
+    - ((?:(?:^|\s)suspend)(?:.){0,8}(?:internet|\stv\s|servic|contract|offer|plan|television))
+    - ((?:(?:^|\s)break)(?:.){0,8}(?:internet|\stv\s|servic|contract|offer|plan|television))
+    - ((?:^|\s)cancel(?:.){0,7}(?:\s|\.|\,|\?|\!|$))
+
+regex_holiday:
+    - ((?:holiday)|(?:(?:time).{0,2}(?:off)))
+    - ((?:(?:^|\s)mov(?:ing|e|es))(?:.){0,1}(?:\sthrough|\sacross))
+    - ((?:get).{0,8}(?:rest))
+
+regex_past:
+    - ((?:was|were|been|did)\s(?:not\s)?(?:moving|move(?:d)?))
+
+regex_expression:
+    - ((?:moving|move).{0,2}(?:forward))
+    - ((?:moving|move).{0,2}(?:around))
+    - ((?:moving|move).{0,2}(?:\sme(?:\s|\.|\,|s|\'|\?|\!|$)))
+    - ((?:you\s)(?:moving|move(?:d)?))
+    
+to_remove:
+ - 'yes'
+ - 'no' 
+ - yeah
+ - ok
+ - okey
+ - okay
+ - mhm
+ - mm
+ - oh
+ - ho
+ - ha
+ - ah
+ - yep
+ - yup
+ - ya
+ - great 
+ - thank
+ - you
+ - correct
+ - see
+
+tags:
+ - '\[location\]'
+ - '\[all\_alphanumeric_special\_characters\]'
+ - '\[organization\_name\]'
+ - '\[gender\]'
+ - '\[street\_address\]'
+ - '\[ethnic\_group\]'
+ - '\[street\_address\]'

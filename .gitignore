@@ -3,6 +3,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+.vscode
+
+# Local conf
+conf/local/*
+
+# All data except data/utils
+data/*
+!*/utils/data/*
+!.gitkeep
+
 # C extensions
 *.so
 

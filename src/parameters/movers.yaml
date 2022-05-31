@@ -1,0 +1,44 @@
+labelling:
+    table_name: 'examples_mover'
+    
+training:
+    test_ratio: 0.15
+    lr_params:
+        penalty: 'l2'
+        dual: False
+        tol: 0.0001
+        C: 1.0
+        fit_intercept: True
+        max_iter: 100
+    lr_grid_params:
+        tol: 
+         - 0.001
+         - 0.0001
+         - 0.00001
+        C: 
+         - 5.0
+         - 2.0
+         - 1.0
+         - 0.5
+         - 0.1
+        max_iter: 
+         - 100
+         - 500
+model:
+    max_features: 20000
+    sequence_length: 50
+    detection_threshold: 0.40
+    use_stopwords: False
+    model_dir: mover_model
+    model_name: model_v2
+    
+load:
+    id_col: call_convrstn_id
+    date_col: call_convrstn_date
+    other_id_cols:
+      - name: bus_bacct_num
+        type: str
+      - name: bus_bacct_num_src_id
+        type: int
+      - name: telephone
+        type: str
